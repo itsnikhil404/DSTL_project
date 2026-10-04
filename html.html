@@ -1,0 +1,150 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Map Analyzer - Boolean Minimization Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header class="hero">
+        <div class="logo">
+            <h1>K-Map Analyzer</h1>
+            <p>Boolean Minimization Laboratory</p>
+        </div>
+
+        <button id="themeBtn" class="theme-btn">
+            🌙 Theme
+        </button>
+    </header>
+
+    <main class="container">
+
+        <!-- INPUT PANEL -->
+
+        <section class="card">
+            <h2>Input Configuration</h2>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Variables</label>
+
+                    <select id="variableCount">
+                        <option value="2">2 Variables</option>
+                        <option value="3">3 Variables</option>
+                        <option value="4" selected>4 Variables</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Minterms</label>
+
+                    <input
+                        type="text"
+                        id="minterms"
+                        placeholder="0,1,2,5,7"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Don't Care Terms</label>
+
+                    <input
+                        type="text"
+                        id="dontcares"
+                        placeholder="10,11"
+                    >
+                </div>
+
+            </div>
+
+            <div class="button-row">
+                <button id="generateBtn">
+                    Generate K-Map
+                </button>
+
+                <button id="resetBtn">
+                    Reset
+                </button>
+            </div>
+
+        </section>
+
+        <!-- RESULT PANEL -->
+
+        <section class="card">
+            <h2>K-Map Grid</h2>
+
+            <div id="kmapContainer">
+
+                <div class="placeholder">
+                    Generate a map to begin
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPRESSION PANEL -->
+
+        <section class="card">
+            <h2>Simplified Expression</h2>
+
+            <div id="expressionBox">
+
+                F = —
+
+            </div>
+
+            <button id="copyBtn">
+                Copy Expression
+            </button>
+        </section>
+
+        <!-- STEP PANEL -->
+
+        <section class="card">
+            <h2>Step By Step Analysis</h2>
+
+            <div id="stepsPanel">
+
+                Waiting for input...
+
+            </div>
+        </section>
+
+        <!-- TRUTH TABLE -->
+
+        <section class="card">
+            <h2>Truth Table</h2>
+
+            <div id="truthTableContainer">
+
+                <div class="placeholder">
+                    Truth table will appear here
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            K-Map Analyzer © 2026
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
